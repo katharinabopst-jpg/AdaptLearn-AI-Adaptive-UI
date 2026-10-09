@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AdaptLearn | AI-Adaptive Study Interface</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <header>
+            <h1>AdaptLearn</h1>
+            <p class="subtitle">AI-Adaptive Study Interface</p>
+        </header>
+
+        <section class="status-panel">
+            <p>Current Interface Mode</p>
+            <h2 id="mode">Standard Mode</h2>
+
+            <p id="adaptation-message">
+                The interface will adapt based on your learning performance.
+            </p>
+        </section>
+
+        <section class="progress-panel">
+            <div>
+                <span>Questions Answered</span>
+                <strong id="answered">0</strong>
+            </div>
+
+            <div>
+                <span>Correct</span>
+                <strong id="correct">0</strong>
+            </div>
+
+            <div>
+                <span>Hints Used</span>
+                <strong id="hints-used">0</strong>
+            </div>
+        </section>
+
+        <section class="question-card">
+
+            <p id="difficulty">Difficulty: Standard</p>
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+            <div id="answers" class="answer-options"></div>
+
+            <button id="hint-button">
+                Need a Hint?
+            </button>
+
+            <div id="hint" class="hidden"></div>
+
+            <div id="feedback" class="hidden"></div>
+
+        </section>
+
+        <section class="transparency-panel">
+            <h3>Why is my interface changing?</h3>
+
+            <p>
+                AdaptLearn observes your recent answers and use of assistance
+                to adjust the level of support and difficulty. You remain in
+                control and can reset the adaptive model at any time.
+            </p>
+
+            <button id="reset-button">
+                Reset Adaptive Model
+            </button>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
